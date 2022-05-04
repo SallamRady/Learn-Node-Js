@@ -4,13 +4,15 @@ const path = require('path');
 const shopRoutes = require('./routes/shop');
 const adminRoutes = require('./routes/admin');
 const rootPath = require('./unils/rootPath');
+const bodyParser = require('body-parser');
 
 // Create Server
 const app = express();
 // Server Configration.
+app.use(bodyParser.urlencoded({extended:false}))
 app.use(express.static(path.join(rootPath,'public')))
-app.set("view engine", "ejs");
-app.set("views", path.join(rootPath, "views"));
+app.set('view engine', 'ejs');
+app.set('views', './views');
 // Basic Middlewatres
 app.use((req,res,next)=>{
     console.log('request cross from here.');
