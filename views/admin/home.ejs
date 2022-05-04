@@ -1,0 +1,21 @@
+<%- include('../includes/header',{pageTitle:'ecommerce'}) %> 
+<div class="m-3 p-3" style="width: 70%;">
+  <h1>Dashboard Home Page</h1>
+  <a class="btn btn-outline-secondary ml-3" href="/admin/addProduct"> + Add Product</a>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% for(let i =0;i<products.length;i++){ %> 
+          <tr>
+              <td><%= products[i].name %> </td>
+              <td><%= products[i].price %> </td>
+          </tr>
+        <% } %> 
+      </tbody>
+  </table>
+</div>

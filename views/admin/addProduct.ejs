@@ -1,0 +1,26 @@
+<%- include('../includes/header',{pageTitle:'ecommerce'}) %> 
+<%- include('../includes/alert',{pageTitle:'ecommerce'}) %> 
+<div class="m-3 p-3 " style="width: 70%;">
+    <h1>Add Product</h1>
+    <form method="post" action="createProduct">
+        <div class="mb-3">
+        <label class="form-label">Product Name</label>
+        <input type="text" name="name" class="form-control" aria-describedby="nameHelp">
+        <div id="nameHelp" class="form-text">Write Product name which will appear to customers</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Product Price</label>
+            <input type="text" name="price" class="form-control" aria-describedby="priceHelp">
+            <div id="priceHelp" class="form-text">Write Product price which will appear to customers</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Product Description</label>
+            <input type="text" name="description" class="form-control" aria-describedby="DescriptionHelp">
+            <div id="DescriptionHelp" class="form-text">Write Product description which will appear to customers</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br/>
+    <br/>
+    <a class="btn btn-outline-secondary ml-3" href="/admin/addProduct"> Back to Home </a>
+</div>

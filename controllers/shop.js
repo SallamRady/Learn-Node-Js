@@ -1,11 +1,17 @@
+// Declaration..
+const path = require('path');
+const adminController = require('./admin')
 module.exports.HomePage = (req,res,next)=>{
-    res.send('<h1>Home Page</h1>');
+    const context = {
+        'products':adminController.products
+    }
+    res.render(path.join('shop','home.ejs'),context)
 }
 
 module.exports.AboutPage = (req,res,next)=>{
-    res.send('<h1>About Page</h1>');
+    res.render(path.join('shop','about.ejs'))
 }
 
 module.exports.ContactPage = (req,res,next)=>{
-    res.send('<h1>Contact Page</h1>');
+    res.render(path.join('shop','contactUs.ejs'))
 }

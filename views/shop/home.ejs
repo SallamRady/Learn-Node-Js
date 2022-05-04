@@ -1,0 +1,20 @@
+<%- include('../includes/header',{pageTitle:'ecommerce'}) %> 
+<%- include('../includes/navbar',{pageTitle:'ecommerce'}) %> 
+<%- include('../includes/alert',{pageTitle:'ecommerce'}) %> 
+
+<div class="m-3 p-3" style="width: 97%;">
+    <h1>Home Page</h1>
+    <div class="productsContainer">
+        <% for(let i=0;i<products.length;i++){ %> 
+            <div class="card m-2" style="width: 17rem;">
+                <img src="images/productImg.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title"><%= products[i].name %> </h5>
+                <p class="card-text"><%= products[i].description %> </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        <% } %> 
+    </div>
+</div>
+<%- include('../includes/footer',{pageTitle:'ecommerce'}) %> 

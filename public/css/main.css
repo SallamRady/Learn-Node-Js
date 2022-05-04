@@ -1,0 +1,17 @@
+.ourNav{
+    box-shadow: 0px 1px 2px;
+}
+
+.productsContainer{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.footer{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    bottom: 0;
+}
