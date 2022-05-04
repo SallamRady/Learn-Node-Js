@@ -9,6 +9,8 @@ const rootPath = require('./unils/rootPath');
 const app = express();
 // Server Configration.
 app.use(express.static(path.join(rootPath,'public')))
+app.set("view engine", "ejs");
+app.set("views", path.join(rootPath, "views"));
 // Basic Middlewatres
 app.use((req,res,next)=>{
     console.log('request cross from here.');
